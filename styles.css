@@ -1,3 +1,59 @@
+@font-face {
+  font-family: "Ninna";
+  src: url("assets/fonts/Ninna-TRIAL.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("assets/fonts/Roobert-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("assets/fonts/Roobert-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("assets/fonts/Roobert-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("assets/fonts/Roobert-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("assets/fonts/Roobert-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("assets/fonts/Roobert-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --cream: #f8f5ee;
   --cream-2: #efe8db;
@@ -18,8 +74,8 @@
   --shadow-soft: 0 20px 48px rgba(16, 13, 8, 0.16);
   --shadow-lift: 0 30px 70px rgba(16, 13, 8, 0.3);
   --header-h: 78px;
-  --heading: "Fraunces", serif;
-  --body: "Montserrat", sans-serif;
+  --heading: "Ninna", "Fraunces", serif;
+  --body: "Roobert", "Montserrat", sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -337,7 +393,6 @@ h2 {
 
 h3 {
   margin-bottom: 14px;
-  font-weight: 500;
   font-size: clamp(20px, 2vw, 30px);
   line-height: 1.2;
 }
