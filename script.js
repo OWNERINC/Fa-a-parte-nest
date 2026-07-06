@@ -32,6 +32,8 @@ if (heroTitle && !prefersReducedMotionInit) {
           heroTitle.appendChild(makeWordSpan(part));
         }
       });
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR') {
+      heroTitle.appendChild(document.createElement('br'));
     } else if (node.nodeType === Node.ELEMENT_NODE) {
       const outer = document.createElement('span');
       outer.className = 'word';
