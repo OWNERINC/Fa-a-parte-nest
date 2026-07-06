@@ -62,9 +62,6 @@
   --clay: #a8794f;
   --clay-deep: #7a5636;
   --gold: #c9a15a;
-  --gold-soft: rgba(201, 161, 90, 0.34);
-  --ink: #100f0c;
-  --ink-soft: #1c1a16;
   --charcoal: #201f1c;
   --charcoal-soft: #514c43;
   --footer: #0b0a09;
@@ -206,7 +203,6 @@ input:focus-visible {
 
 .hero__media--photo::after,
 .lead-capture__media--photo::after,
-.wide-image-section__image--photo::after,
 .panorama-section__image--photo::after {
   content: "";
   position: absolute;
@@ -398,7 +394,6 @@ h3 {
 
 .hero p,
 .intro-section__heading p,
-.wide-image-section__copy p,
 .section-heading p,
 .process-item p {
   color: var(--charcoal-soft);
@@ -509,30 +504,6 @@ h3 {
   align-self: end;
   padding-bottom: clamp(4px, 1vw, 14px);
   text-align: right;
-}
-
-.wide-image-section {
-  position: relative;
-  min-height: 640px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  align-items: center;
-  background: var(--cream);
-}
-
-.wide-image-section__image {
-  height: 100%;
-  min-height: 640px;
-  border-left: 0;
-}
-
-.wide-image-section__image--photo {
-  position: relative;
-}
-
-.wide-image-section__copy {
-  max-width: 560px;
-  padding: clamp(40px, 7vw, 96px);
 }
 
 .video-section {
@@ -733,10 +704,6 @@ h3 {
   margin: 0;
 }
 
-.profile-section {
-  background: var(--cream-2);
-}
-
 .panorama-section {
   min-height: 360px;
 }
@@ -753,23 +720,6 @@ h3 {
 
 .amenity-section {
   background: var(--cream-2);
-}
-
-.signature-section {
-  background: var(--ink);
-  color: var(--white);
-}
-
-.signature-section .section-heading::before {
-  background: var(--gold);
-}
-
-.signature-section h2 em {
-  color: var(--gold);
-}
-
-.signature-section .section-heading p {
-  color: rgba(255, 255, 255, 0.72);
 }
 
 .amenity-grid {
@@ -1028,14 +978,6 @@ code {
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .wide-image-section {
-    grid-template-columns: 1fr;
-  }
-
-  .wide-image-section__image {
-    min-height: 440px;
-  }
 }
 
 @media (max-width: 820px) {
@@ -1179,7 +1121,6 @@ code {
 
   .hero p,
   .intro-section__heading p,
-  .wide-image-section__copy p,
   .section-heading p,
   .lead-capture__copy {
     font-size: 12.75px;
