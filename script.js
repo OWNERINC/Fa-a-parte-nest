@@ -6,6 +6,54 @@ if (window.lucide) {
   });
 }
 
+const heroTitle = document.querySelector('.hero__title');
+const prefersReducedMotionInit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (heroTitle && !prefersReducedMotionInit) {
+  const makeWordSpan = (text) => {
+    const outer = document.createElement('span');
+    outer.className = 'word';
+    const inner = document.createElement('span');
+    inner.className = 'word-inner';
+    inner.textContent = text;
+    outer.appendChild(inner);
+    return outer;
+  };
+
+  const nodes = Array.from(heroTitle.childNodes);
+  heroTitle.innerHTML = '';
+
+  nodes.forEach((node) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      node.textContent.split(/(\s+)/).forEach((part) => {
+        if (part.trim() === '') {
+          if (part.length) heroTitle.appendChild(document.createTextNode(part));
+        } else {
+          heroTitle.appendChild(makeWordSpan(part));
+        }
+      });
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      const outer = document.createElement('span');
+      outer.className = 'word';
+      const inner = document.createElement('span');
+      inner.className = 'word-inner';
+      inner.appendChild(node.cloneNode(true));
+      outer.appendChild(inner);
+      heroTitle.appendChild(outer);
+    }
+  });
+
+  heroTitle.querySelectorAll('.word-inner').forEach((word, index) => {
+    word.style.transitionDelay = `${index * 45}ms`;
+  });
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      heroTitle.classList.add('is-revealed');
+    });
+  });
+}
+
 const siteHeader = document.querySelector('[data-site-header]');
 
 if (siteHeader) {
@@ -15,6 +63,20 @@ if (siteHeader) {
 
   setScrolled();
   window.addEventListener('scroll', setScrolled, { passive: true });
+}
+
+const scrollProgress = document.querySelector('[data-scroll-progress]');
+
+if (scrollProgress) {
+  const setProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    scrollProgress.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+  };
+
+  setProgress();
+  window.addEventListener('scroll', setProgress, { passive: true });
+  window.addEventListener('resize', setProgress);
 }
 
 const navToggle = document.querySelector('[data-nav-toggle]');
@@ -132,7 +194,7 @@ document.querySelectorAll('.youtube-card__thumb').forEach((img) => {
 const revealItems = document.querySelectorAll('.reveal');
 
 revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${Math.min(index * 60, 240)}ms`;
+  item.style.transitionDelay = `${Math.min(index * 90, 360)}ms`;
 });
 
 if ('IntersectionObserver' in window) {
