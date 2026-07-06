@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faça Parte NEST</title>
+    <meta name="description" content="Landing page estática da campanha Faça Parte NEST." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteudo</a>
+
+      <header class="site-header" data-site-header aria-label="Topo">
+        <a class="brand" href="#inicio" aria-label="NEST inicio">
+          <img class="brand__logo brand__logo--header" src="assets/logos/logo%20simplificada%20preta.webp" alt="NEST Mountain Lodge" loading="eager" />
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Navegacao principal">
+          <a href="#modelo">Modelo</a>
+          <a href="#funciona">Como funciona</a>
+          <a href="#vantagens">Vantagens</a>
+          <a href="#formulario">Contato</a>
+        </nav>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+          <img class="nav-toggle__icon" src="assets/logos/icone%20nest%20preto.png" alt="" aria-hidden="true" />
+        </button>
+      </header>
+    <div class="nav-scrim" data-nav-scrim aria-hidden="true"></div>
+
+    <main id="conteudo" class="page-shell">
+      <section class="hero" id="inicio" aria-label="Apresentacao NEST">
+        <div class="hero__media hero__media--photo media-frame media-frame--hero">
+          <img class="section-media__img" src="assets/images/HERO.webp" alt="Paisagem hero do NEST" loading="eager" fetchpriority="high" />
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="hero__content reveal">
+          <h1>O privilégio de observar Gramado de cima.</h1>
+          <a class="button button--light" href="#modelo">Viva a experiência NEST</a>
+        </div>
+      </section>
+
+      <section class="section intro-section" id="modelo">
+        <div class="intro-section__heading reveal">
+          <h2>Onde o barulho do mundo não alcança.</h2>
+        </div>
+
+        <div class="intro-feature reveal">
+          <div class="intro-feature__copy">
+            <p>Uma propriedade desenhada para oferecer uma experiência única, acolhedora e inesquecível. Unindo a força da natureza a serviços de altíssimo padrão.</p>
+          </div>
+          <div class="intro-feature__video youtube-card youtube-card--inline" data-youtube-id="SHSkFiBzITI" data-embed-src="https://www.youtube.com/embed/SHSkFiBzITI?si=FjaGTjBKLg1tNkQy" role="button" tabindex="0" aria-label="Carregar video conceito do YouTube">
+            <div class="youtube-card__poster media-frame youtube-card__poster--concept">
+              <img class="youtube-card__thumb" alt="Thumbnail do video conceito" loading="eager" fetchpriority="high" data-video-id="SHSkFiBzITI" data-fallback-level="0" src="https://img.youtube.com/vi/SHSkFiBzITI/maxresdefault.jpg" />
+            </div>
+            <button class="youtube-card__play" type="button" aria-label="Reproduzir video conceito">
+              <i data-lucide="play"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="wide-image-section" aria-label="Imagem panoramica">
+        <div class="wide-image-section__image wide-image-section__image--photo media-frame">
+          <img class="section-media__img" src="assets/images/foto%20panoramica.webp" alt="Foto panoramica do NEST" loading="lazy" />
+        </div>
+        <div class="wide-image-section__copy reveal">
+          <h2>Onde o bem-estar dita o seu próprio ritmo.</h2>
+          <p>Cada detalhe foi concebido para acolher o seu corpo e silenciar a mente, transformando a sua estada em uma verdadeira jornada de autocuidado e descompressão.</p>
+        </div>
+      </section>
+
+      <section class="section video-section" id="video">
+        <div class="section-heading reveal">
+          <h2>Sinta o ritmo da montanha.</h2>
+        </div>
+        <div class="youtube-card reveal" data-youtube-id="lyctxI0ICVg" data-embed-src="https://www.youtube.com/embed/lyctxI0ICVg?si=YQJVr3-YrToAeSkk" role="button" tabindex="0" aria-label="Carregar video do YouTube">
+          <div class="youtube-card__poster media-frame youtube-card__poster--main">
+            <img class="youtube-card__thumb" alt="Thumbnail do video principal" loading="eager" fetchpriority="high" data-video-id="lyctxI0ICVg" data-fallback-level="0" src="https://img.youtube.com/vi/lyctxI0ICVg/maxresdefault.jpg" />
+          </div>
+          <button class="youtube-card__play" type="button" aria-label="Reproduzir video">
+            <i data-lucide="play"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="section process-section" id="funciona">
+        <div class="section-heading reveal">
+          <h2>Um jeito simples de entender o modelo.</h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-item reveal">
+            <i data-lucide="badge-check"></i>
+            <h3>Adquira uma fração</h3>
+            <p>Uma proposta clara para quem quer unir patrimônio, lazer e praticidade em um único formato.</p>
+          </article>
+          <article class="process-item reveal">
+            <i data-lucide="calendar-days"></i>
+            <h3>Escolha seu período</h3>
+            <p>Organize sua experiência com previsibilidade, escolha e uma rotina pensada para descansar melhor.</p>
+          </article>
+          <article class="process-item reveal">
+            <i data-lucide="sparkles"></i>
+            <h3>Viva com conforto</h3>
+            <p>Serviço, conforto e conveniência aparecem no dia a dia sem exigir esforço extra.</p>
+          </article>
+          <article class="process-item reveal">
+            <i data-lucide="repeat-2"></i>
+            <h3>Compartilhe custos</h3>
+            <p>Uma estrutura desenhada para otimizar custos, simplificar a gestão e preservar a qualidade.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band-section band-section--sand" data-parallax>
+        <div class="band-section__media" data-parallax-media>
+          <img src="assets/images/paralax.webp" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <div class="band-section__overlay" aria-hidden="true"></div>
+        <div class="band-section__inner reveal">
+          <h2>O privilégio de viver o essencial com inteligência.</h2>
+        </div>
+      </section>
+
+      <section class="section advantages-section" id="vantagens">
+        <div class="advantage-list">
+          <article class="advantage reveal">
+            <i data-lucide="landmark"></i>
+            <h3>Patrimônio</h3>
+            <p>Mais previsibilidade, mais controle e uma forma objetiva de participar do projeto.</p>
+          </article>
+          <article class="advantage reveal">
+            <i data-lucide="wallet-cards"></i>
+            <h3>Proporcionalidade</h3>
+            <p>A aquisição acompanha o uso real e elimina despesas estruturais desnecessárias.</p>
+          </article>
+          <article class="advantage reveal">
+            <i data-lucide="concierge-bell"></i>
+            <h3>Serviço e conveniência</h3>
+            <p>Operação simples, padronizada e com atendimento alinhado ao nível da proposta.</p>
+          </article>
+          <article class="advantage reveal">
+            <i data-lucide="leaf"></i>
+            <h3>Natureza e descanso</h3>
+            <p>Silêncio, natureza e conforto compõem a atmosfera que sustenta a experiência.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section profile-section" id="perfil">
+        <div class="section-heading reveal">
+          <h2>Uma escolha para quem domina o próprio tempo.</h2>
+          <p>O NEST une a exclusividade de um refúgio premium à inteligência da propriedade compartilhada, garantindo a gestão impecável e a liquidez do seu patrimônio de forma fluida.</p>
+        </div>
+      </section>
+
+      <section class="panorama-section">
+        <div class="panorama-section__image panorama-section__image--photo media-frame">
+          <img class="section-media__img" src="assets/images/full%20width.webp" alt="Imagem full width do NEST" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="section amenity-section">
+        <div class="section-heading reveal">
+          <h2>O equilíbrio perfeito entre o conforto e a contemplação.</h2>
+        </div>
+        <div class="amenity-grid">
+          <div class="amenity reveal"><i data-lucide="waves"></i><span>Piscinas</span></div>
+          <div class="amenity reveal"><i data-lucide="dumbbell"></i><span>Fitness</span></div>
+          <div class="amenity reveal"><i data-lucide="utensils"></i><span>Gastronomia</span></div>
+          <div class="amenity reveal"><i data-lucide="trees"></i><span>Natureza</span></div>
+          <div class="amenity reveal"><i data-lucide="gamepad-2"></i><span>Lazer</span></div>
+          <div class="amenity reveal"><i data-lucide="wine"></i><span>Convivência</span></div>
+        </div>
+      </section>
+
+      <section class="section signature-section" id="assinatura">
+        <div class="section-heading reveal">
+          <h2>O ápice da arquitetura na Borges de Medeiros.</h2>
+          <p>Projetado para transcender o conceito de imóvel. É a materialização de um projeto singular, gerido para assegurar um patrimônio sólido na localização mais cobiçada de Gramado.</p>
+        </div>
+      </section>
+
+      <section class="lead-capture" id="formulario">
+        <div class="lead-capture__media lead-capture__media--photo media-frame">
+          <img class="section-media__img" src="assets/images/Fundo%20forms.webp" alt="Fundo do formulario NEST" loading="lazy" />
+        </div>
+        <div class="lead-capture__overlay" aria-hidden="true"></div>
+        <div class="lead-capture__box reveal">
+          <h2>Quero receber o contato de um consultor.</h2>
+          <p class="lead-capture__copy">Fale com um de nossos especialistas e dê o primeiro passo para garantir o seu refúgio definitivo nas alturas.</p>
+          <form class="lead-form" action="#" aria-label="Formulario visual sem envio configurado">
+            <label>
+              Nome
+              <input type="text" name="nome" placeholder="Seu nome" autocomplete="name" />
+            </label>
+            <label>
+              Telefone
+              <input type="tel" name="telefone" placeholder="Seu telefone" autocomplete="tel" />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" />
+            </label>
+            <fieldset>
+              <legend>Melhor forma de contato</legend>
+              <label class="radio-line"><input type="radio" name="contato" value="whatsapp" /> WhatsApp</label>
+              <label class="radio-line"><input type="radio" name="contato" value="ligacao" /> Ligação</label>
+            </fieldset>
+            <label class="check-line">
+              <input type="checkbox" name="aceite" /> Aceito receber contato sobre o NEST.
+            </label>
+            <button class="button button--solid" type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__brand">
+        <img class="brand__logo brand__logo--footer" src="assets/logos/logo%20branca%20completa.webp" alt="Logo NEST" loading="lazy" />
+        <p>Campanha institucional NEST com foco em experiência, natureza e exclusividade.</p>
+      </div>
+      <div class="site-footer__share">
+        <p>Conhece alguém que amaria ter essa experiência?</p>
+        <button class="button site-footer__share-btn" type="button" data-share-button>
+          <i data-lucide="share-2"></i>
+          Compartilhar
+        </button>
+      </div>
+      <div class="site-footer__links">
+        <a href="#inicio">Voltar ao topo</a>
+        <a href="#modelo">Modelo</a>
+        <a href="#formulario">Contato</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

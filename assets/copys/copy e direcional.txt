@@ -1,0 +1,27 @@
+1. Hero Section (A Primeira Impressão)
+Objetivo: Impacto imediato e confirmação de que o usuário chegou ao lugar certo após escanear o folder. Visual: Vídeo curto em loop (b-roll) ou uma imagem de altíssima qualidade da fachada do Nest ou da vista das montanhas de Gramado.
+•	Headline: O seu refúgio definitivo nas alturas.
+•	Subheadline: Descubra o Nest Mountain Lodge. A exclusividade de viver o melhor de Gramado, onde o design encontra a natureza.
+•	CTA Primário (Botão Fixo/Sticky): Falar com um Especialista [Ícone do WhatsApp]
+2. O Manifesto Nest (Conexão Emocional)
+Objetivo: Vender o conceito e o estilo de vida, não apenas o metro quadrado. Visual: Foto do interior integrado com a natureza ou do elevador panorâmico.
+•	Copy: > Elevamos o conceito de morar bem.
+No Nest, cada detalhe foi pensado para integrar você à paisagem. Do acesso exclusivo pelo elevador panorâmico à atmosfera única da serra gaúcha, este é o cenário perfeito para as suas próximas grandes memórias. Um projeto assinado para quem não abre mão do extraordinário.
+3. Diferenciais (Escaneabilidade)
+Objetivo: Informação rápida para o perfil analítico, reforçando o alto padrão. Visual: Grid de ícones minimalistas com textos curtos.
+•	Copy:
+o	Vistas Incomparáveis: Elevador panorâmico e arquitetura que emoldura a montanha.
+o	Localização Privilegiada: A paz da serra a poucos minutos do coração de Gramado.
+o	Design Singular: Estética sofisticada, agressiva no requinte e imersiva na natureza.
+4. O Loop de Compartilhamento (Dark Social)
+Objetivo: Cumprir a meta de fazer o visitante compartilhar com amigos e familiares, aproveitando o gatilho de pertencimento. Visual: Bloco de destaque, possivelmente com um fundo escuro e tipografia elegante.
+•	Headline: Com quem você dividiria essa vista?
+•	Copy: Grandes conquistas merecem ser compartilhadas com quem a gente ama. Mostre o Nest para a sua família ou amigos.
+•	Botão de Ação: Compartilhar via WhatsApp [Ícone de Aviãozinho/Compartilhamento] (Dica técnica: configure este botão com uma mensagem pré-pronta usando a API do WhatsApp, ex: "Dá uma olhada nesse projeto em Gramado que acabei de conhecer: [Link da LP]").
+5. Call to Action Final (Conversão de Fundo de Funil)
+Objetivo: Captura do lead quente que desceu até o final da página. Visual: Formulário ultra-enxuto ou redirecionamento direto para o concierge.
+•	Headline: Dê o próximo passo em direção ao seu novo refúgio.
+•	Copy: Cadastre-se para receber o material completo em primeira mão ou fale agora com nosso atendimento exclusivo para agendar uma apresentação do projeto.
+•	Formulário (Apenas o essencial): Nome | WhatsApp
+•	Botão: Quero conhecer o Nest
+
