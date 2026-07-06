@@ -160,7 +160,6 @@ input:focus-visible {
 #inicio,
 #modelo,
 #funciona,
-#vantagens,
 #formulario {
   scroll-margin-top: 100px;
 }
@@ -401,8 +400,7 @@ h3 {
 .intro-section__heading p,
 .wide-image-section__copy p,
 .section-heading p,
-.process-item p,
-.advantage p {
+.process-item p {
   color: var(--charcoal-soft);
   font-size: 15px;
   font-weight: 400;
@@ -510,6 +508,7 @@ h3 {
   max-width: 390px;
   align-self: end;
   padding-bottom: clamp(4px, 1vw, 14px);
+  text-align: right;
 }
 
 .wide-image-section {
@@ -672,8 +671,7 @@ h3 {
   box-shadow: var(--shadow-soft);
 }
 
-.process-item svg,
-.advantage svg {
+.process-item svg {
   width: 38px;
   height: 38px;
   color: var(--taupe);
@@ -735,42 +733,8 @@ h3 {
   margin: 0;
 }
 
-.advantages-section {
-  background: var(--cream);
-}
-
 .profile-section {
   background: var(--cream-2);
-}
-
-.advantage-list {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(22px, 3vw, 44px);
-}
-
-.advantage {
-  padding: clamp(30px, 3vw, 40px) clamp(20px, 2.4vw, 30px);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--white);
-  text-align: center;
-  transition: transform 420ms var(--ease-spring), box-shadow 420ms var(--ease), border-color 260ms var(--ease);
-}
-
-.advantage:hover {
-  transform: translateY(-8px) scale(1.015);
-  border-color: transparent;
-  box-shadow: var(--shadow-soft);
-}
-
-.advantage h3 {
-  margin-top: 24px;
-  font-size: clamp(19px, 1.7vw, 26px);
-  hyphens: auto;
-  overflow-wrap: break-word;
 }
 
 .panorama-section {
@@ -1061,8 +1025,7 @@ code {
     width: clamp(80px, 12vw, 110px);
   }
 
-  .process-grid,
-  .advantage-list {
+  .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1165,8 +1128,7 @@ code {
   }
 
   .intro-feature,
-  .process-grid,
-  .advantage-list {
+  .process-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1175,6 +1137,10 @@ code {
   }
 
   .intro-feature {
+    text-align: left;
+  }
+
+  .intro-feature__copy {
     text-align: left;
   }
 
@@ -1211,11 +1177,6 @@ code {
     font-weight: 700;
   }
 
-  .advantage h3 {
-    font-size: 12px;
-    font-weight: 700;
-  }
-
   .hero p,
   .intro-section__heading p,
   .wide-image-section__copy p,
@@ -1224,8 +1185,7 @@ code {
     font-size: 12.75px;
   }
 
-  .process-item p,
-  .advantage p {
+  .process-item p {
     font-size: 9.5px;
   }
 
