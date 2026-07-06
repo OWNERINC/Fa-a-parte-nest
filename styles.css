@@ -75,17 +75,16 @@ input {
 
 .skip-link {
   position: fixed;
-  left: 18px;
+  left: -9999px;
   top: 18px;
   z-index: 100;
-  transform: translateY(-150%);
   background: var(--white);
   color: var(--charcoal);
   padding: 10px 14px;
 }
 
 .skip-link:focus {
-  transform: translateY(0);
+  left: 18px;
 }
 
 .page-shell {
