@@ -833,7 +833,6 @@ h3 {
   line-height: 1.5;
 }
 
-.radio-line,
 .check-line {
   display: flex;
   align-items: center;
@@ -848,7 +847,6 @@ h3 {
   cursor: pointer;
 }
 
-.lead-form input[type="radio"],
 .lead-form input[type="checkbox"] {
   width: 20px;
   height: 20px;
