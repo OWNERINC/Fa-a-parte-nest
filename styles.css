@@ -825,6 +825,14 @@ h3 {
   border: 0;
 }
 
+.lead-form__note {
+  margin: 0;
+  color: var(--taupe);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 .radio-line,
 .check-line {
   display: flex;
