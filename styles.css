@@ -673,6 +673,11 @@ h3 {
   text-align: left;
 }
 
+.band-section--media {
+  min-height: clamp(320px, 42vw, 560px);
+  padding: 0;
+}
+
 .band-section--sand {
   background: var(--sand);
   color: var(--white);
