@@ -992,7 +992,7 @@ code {
   }
 
   .brand__logo--footer {
-    width: clamp(135px, 40.5vw, 195px);
+    width: clamp(67.5px, 20.25vw, 97.5px);
   }
 
   .nav-toggle {
@@ -1135,7 +1135,7 @@ code {
   }
 
   .brand__logo--footer {
-    width: clamp(127.5px, 51vw, 172.5px);
+    width: clamp(63.75px, 25.5vw, 86.25px);
   }
 
   .lead-capture__box {
