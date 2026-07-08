@@ -8,6 +8,7 @@
       "node_modules/**",
       "assets/copys/**",
       "**/*.psd",
+      "assets/images/hero desk.png",
       "assets/fonts/Ninna/**",
       "assets/fonts/Roobert/**",
       "assets/fonts/*.otf",
