@@ -255,11 +255,48 @@ if (parallaxSections.length && !prefersReducedMotion) {
 }
 
 const form = document.querySelector('.lead-form');
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/14572152/4u1r0p6/';
 
 if (form) {
-  form.addEventListener('submit', (event) => {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalButtonLabel = submitButton ? submitButton.textContent : '';
+
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    window.alert('Formulario visual. O envio sera configurado depois.');
+
+    const formData = new FormData(form);
+    const payload = {
+      nome: formData.get('nome') || '',
+      telefone: formData.get('telefone') || '',
+      email: formData.get('email') || '',
+      aceite: formData.get('aceite') ? 'sim' : 'nao',
+      pagina: window.location.href,
+      enviado_em: new Date().toISOString(),
+    };
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Enviando...';
+    }
+
+    try {
+      await fetch(ZAPIER_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(payload).toString(),
+      });
+
+      form.reset();
+      window.alert('Recebemos seu contato! Em breve falaremos com voce no WhatsApp.');
+    } catch (error) {
+      window.alert('Nao foi possivel enviar agora. Tente novamente em instantes.');
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonLabel;
+      }
+    }
   });
 }
 

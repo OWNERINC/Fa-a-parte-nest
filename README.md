@@ -25,9 +25,23 @@ faca_parte_nest/
 4. Videos serao embeds do YouTube; troque o `data-youtube-id` no `index.html` pelo ID final.
 5. Icones usam Lucide via CDN, com atributos `data-lucide` no HTML.
 
+## Integracao do formulario (Zapier)
+
+O formulario de contato (`#formulario`) envia os leads via webhook para o Zapier,
+que distribui os dados (ex.: RD Station, planilha, WhatsApp) a partir dali.
+
+- URL do webhook: definida em `ZAPIER_WEBHOOK_URL` em `script.js`.
+- Envio via `fetch` com `mode: 'no-cors'` e body `application/x-www-form-urlencoded`
+  (necessario porque o Catch Hook do Zapier nao retorna headers de CORS; com
+  `no-cors` a resposta fica opaca, entao o site sempre assume sucesso apos o
+  fetch resolver e so mostra erro se a propria chamada de rede falhar).
+- Campos enviados: `nome`, `telefone`, `email`, `aceite` (`sim`/`nao`),
+  `pagina` (URL de origem) e `enviado_em` (timestamp ISO).
+- Para trocar o destino, basta atualizar o valor de `ZAPIER_WEBHOOK_URL`.
+
 ## Status
 
-- Formulario apenas visual por enquanto.
+- Formulario conectado ao Zapier via webhook (ver secao acima).
 - Imagens em placeholder ate receber direcional final.
 - Videos via YouTube.
 - Icones via Lucide CDN.
