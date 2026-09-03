@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f5ee" />
     <title>Faça Parte NEST</title>
     <meta name="description" content="Landing page estática da campanha Faça Parte NEST." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
   </head>
@@ -16,29 +17,29 @@
 
       <header class="site-header" data-site-header aria-label="Topo">
         <a class="brand" href="#inicio" aria-label="NEST inicio">
-          <img class="brand__logo brand__logo--header" src="assets/logos/logo%20simplificada%20preta.webp" alt="NEST Mountain Lodge" loading="eager" />
+          <img class="brand__logo brand__logo--header" src="assets/logos/logo%20nest%20marrom.webp" alt="NEST Mountain Lodge" loading="eager" />
         </a>
         <nav class="site-nav" id="site-nav" aria-label="Navegacao principal">
-          <a href="#modelo">Modelo</a>
+          <a href="#modelo">O que é</a>
           <a href="#funciona">Como funciona</a>
-          <a href="#vantagens">Vantagens</a>
           <a href="#formulario">Contato</a>
         </nav>
         <button class="nav-toggle" type="button" data-nav-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
-          <img class="nav-toggle__icon" src="assets/logos/icone%20nest%20preto.png" alt="" aria-hidden="true" />
+          <img class="nav-toggle__icon" src="assets/logos/icone%20nest%20marrom.webp" alt="" aria-hidden="true" />
         </button>
+        <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
       </header>
     <div class="nav-scrim" data-nav-scrim aria-hidden="true"></div>
 
     <main id="conteudo" class="page-shell">
       <section class="hero" id="inicio" aria-label="Apresentacao NEST">
         <div class="hero__media hero__media--photo media-frame media-frame--hero">
-          <img class="section-media__img" src="assets/images/HERO.webp" alt="Paisagem hero do NEST" loading="eager" fetchpriority="high" />
+          <img class="section-media__img hero__media-img" src="assets/images/HERO.webp" alt="Paisagem hero do NEST" loading="eager" fetchpriority="high" />
         </div>
         <div class="hero__overlay" aria-hidden="true"></div>
 
         <div class="hero__content reveal">
-          <h1>O privilégio de observar Gramado de cima.</h1>
+          <h1 class="hero__title">Um novo Jeito<br />de viver <em>Gramado</em>.</h1>
           <a class="button button--light" href="#modelo">Viva a experiência NEST</a>
         </div>
       </section>
@@ -63,19 +64,19 @@
         </div>
       </section>
 
-      <section class="wide-image-section" aria-label="Imagem panoramica">
-        <div class="wide-image-section__image wide-image-section__image--photo media-frame">
-          <img class="section-media__img" src="assets/images/foto%20panoramica.webp" alt="Foto panoramica do NEST" loading="lazy" />
+      <section class="band-section band-section--sand" data-parallax>
+        <div class="band-section__media" data-parallax-media>
+          <img src="assets/images/paralax.webp" alt="" aria-hidden="true" loading="lazy" />
         </div>
-        <div class="wide-image-section__copy reveal">
-          <h2>Onde o bem-estar dita o seu próprio ritmo.</h2>
-          <p>Cada detalhe foi concebido para acolher o seu corpo e silenciar a mente, transformando a sua estada em uma verdadeira jornada de autocuidado e descompressão.</p>
+        <div class="band-section__overlay" aria-hidden="true"></div>
+        <div class="band-section__inner reveal">
+          <h2>Condições especiais para viver com mais inteligência</h2>
         </div>
       </section>
 
       <section class="section video-section" id="video">
         <div class="section-heading reveal">
-          <h2>Sinta o ritmo da montanha.</h2>
+          <h2>Acompanhe a construção do seu ninho!</h2>
         </div>
         <div class="youtube-card reveal" data-youtube-id="lyctxI0ICVg" data-embed-src="https://www.youtube.com/embed/lyctxI0ICVg?si=YQJVr3-YrToAeSkk" role="button" tabindex="0" aria-label="Carregar video do YouTube">
           <div class="youtube-card__poster media-frame youtube-card__poster--main">
@@ -116,57 +117,9 @@
         </div>
       </section>
 
-      <section class="band-section band-section--sand" data-parallax>
-        <div class="band-section__media" data-parallax-media>
-          <img src="assets/images/paralax.webp" alt="" aria-hidden="true" loading="lazy" />
-        </div>
-        <div class="band-section__overlay" aria-hidden="true"></div>
-        <div class="band-section__inner reveal">
-          <h2>O privilégio de viver o essencial com inteligência.</h2>
-        </div>
-      </section>
-
-      <section class="section advantages-section" id="vantagens">
-        <div class="advantage-list">
-          <article class="advantage reveal">
-            <i data-lucide="landmark"></i>
-            <h3>Patrimônio</h3>
-            <p>Mais previsibilidade, mais controle e uma forma objetiva de participar do projeto.</p>
-          </article>
-          <article class="advantage reveal">
-            <i data-lucide="wallet-cards"></i>
-            <h3>Proporcionalidade</h3>
-            <p>A aquisição acompanha o uso real e elimina despesas estruturais desnecessárias.</p>
-          </article>
-          <article class="advantage reveal">
-            <i data-lucide="concierge-bell"></i>
-            <h3>Serviço e conveniência</h3>
-            <p>Operação simples, padronizada e com atendimento alinhado ao nível da proposta.</p>
-          </article>
-          <article class="advantage reveal">
-            <i data-lucide="leaf"></i>
-            <h3>Natureza e descanso</h3>
-            <p>Silêncio, natureza e conforto compõem a atmosfera que sustenta a experiência.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section profile-section" id="perfil">
-        <div class="section-heading reveal">
-          <h2>Uma escolha para quem domina o próprio tempo.</h2>
-          <p>O NEST une a exclusividade de um refúgio premium à inteligência da propriedade compartilhada, garantindo a gestão impecável e a liquidez do seu patrimônio de forma fluida.</p>
-        </div>
-      </section>
-
-      <section class="panorama-section">
-        <div class="panorama-section__image panorama-section__image--photo media-frame">
-          <img class="section-media__img" src="assets/images/full%20width.webp" alt="Imagem full width do NEST" loading="lazy" />
-        </div>
-      </section>
-
       <section class="section amenity-section">
         <div class="section-heading reveal">
-          <h2>O equilíbrio perfeito entre o conforto e a contemplação.</h2>
+          <h2>Tudo que você precisa para curar corpo e mente:</h2>
         </div>
         <div class="amenity-grid">
           <div class="amenity reveal"><i data-lucide="waves"></i><span>Piscinas</span></div>
@@ -178,21 +131,14 @@
         </div>
       </section>
 
-      <section class="section signature-section" id="assinatura">
-        <div class="section-heading reveal">
-          <h2>O ápice da arquitetura na Borges de Medeiros.</h2>
-          <p>Projetado para transcender o conceito de imóvel. É a materialização de um projeto singular, gerido para assegurar um patrimônio sólido na localização mais cobiçada de Gramado.</p>
-        </div>
-      </section>
-
       <section class="lead-capture" id="formulario">
         <div class="lead-capture__media lead-capture__media--photo media-frame">
           <img class="section-media__img" src="assets/images/Fundo%20forms.webp" alt="Fundo do formulario NEST" loading="lazy" />
         </div>
         <div class="lead-capture__overlay" aria-hidden="true"></div>
         <div class="lead-capture__box reveal">
-          <h2>Quero receber o contato de um consultor.</h2>
-          <p class="lead-capture__copy">Fale com um de nossos especialistas e dê o primeiro passo para garantir o seu refúgio definitivo nas alturas.</p>
+          <h2>Entre em contato para saber mais:</h2>
+          <p class="lead-capture__copy">Fale com nossa equipe e garanta condições especiais para ter seu refúgio definitivo em Gramado!</p>
           <form class="lead-form" action="#" aria-label="Formulario visual sem envio configurado">
             <label>
               Nome
@@ -206,11 +152,7 @@
               E-mail
               <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" />
             </label>
-            <fieldset>
-              <legend>Melhor forma de contato</legend>
-              <label class="radio-line"><input type="radio" name="contato" value="whatsapp" /> WhatsApp</label>
-              <label class="radio-line"><input type="radio" name="contato" value="ligacao" /> Ligação</label>
-            </fieldset>
+            <p class="lead-form__note">*Vamos te chamar daqui a aproximadamente 1 minuto no seu WhatsApp!</p>
             <label class="check-line">
               <input type="checkbox" name="aceite" /> Aceito receber contato sobre o NEST.
             </label>
@@ -223,7 +165,6 @@
     <footer class="site-footer">
       <div class="site-footer__brand">
         <img class="brand__logo brand__logo--footer" src="assets/logos/logo%20branca%20completa.webp" alt="Logo NEST" loading="lazy" />
-        <p>Campanha institucional NEST com foco em experiência, natureza e exclusividade.</p>
       </div>
       <div class="site-footer__share">
         <p>Conhece alguém que amaria ter essa experiência?</p>
@@ -234,7 +175,7 @@
       </div>
       <div class="site-footer__links">
         <a href="#inicio">Voltar ao topo</a>
-        <a href="#modelo">Modelo</a>
+        <a href="#modelo">O que é</a>
         <a href="#formulario">Contato</a>
       </div>
     </footer>

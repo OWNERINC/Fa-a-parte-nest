@@ -6,6 +6,56 @@ if (window.lucide) {
   });
 }
 
+const heroTitle = document.querySelector('.hero__title');
+const prefersReducedMotionInit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (heroTitle && !prefersReducedMotionInit) {
+  const makeWordSpan = (text) => {
+    const outer = document.createElement('span');
+    outer.className = 'word';
+    const inner = document.createElement('span');
+    inner.className = 'word-inner';
+    inner.textContent = text;
+    outer.appendChild(inner);
+    return outer;
+  };
+
+  const nodes = Array.from(heroTitle.childNodes);
+  heroTitle.innerHTML = '';
+
+  nodes.forEach((node) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      node.textContent.split(/(\s+)/).forEach((part) => {
+        if (part.trim() === '') {
+          if (part.length) heroTitle.appendChild(document.createTextNode(part));
+        } else {
+          heroTitle.appendChild(makeWordSpan(part));
+        }
+      });
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR') {
+      heroTitle.appendChild(document.createElement('br'));
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      const outer = document.createElement('span');
+      outer.className = 'word';
+      const inner = document.createElement('span');
+      inner.className = 'word-inner';
+      inner.appendChild(node.cloneNode(true));
+      outer.appendChild(inner);
+      heroTitle.appendChild(outer);
+    }
+  });
+
+  heroTitle.querySelectorAll('.word-inner').forEach((word, index) => {
+    word.style.transitionDelay = `${index * 45}ms`;
+  });
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      heroTitle.classList.add('is-revealed');
+    });
+  });
+}
+
 const siteHeader = document.querySelector('[data-site-header]');
 
 if (siteHeader) {
@@ -15,6 +65,20 @@ if (siteHeader) {
 
   setScrolled();
   window.addEventListener('scroll', setScrolled, { passive: true });
+}
+
+const scrollProgress = document.querySelector('[data-scroll-progress]');
+
+if (scrollProgress) {
+  const setProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    scrollProgress.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+  };
+
+  setProgress();
+  window.addEventListener('scroll', setProgress, { passive: true });
+  window.addEventListener('resize', setProgress);
 }
 
 const navToggle = document.querySelector('[data-nav-toggle]');
@@ -132,7 +196,7 @@ document.querySelectorAll('.youtube-card__thumb').forEach((img) => {
 const revealItems = document.querySelectorAll('.reveal');
 
 revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${Math.min(index * 60, 240)}ms`;
+  item.style.transitionDelay = `${Math.min(index * 90, 360)}ms`;
 });
 
 if ('IntersectionObserver' in window) {
@@ -191,11 +255,48 @@ if (parallaxSections.length && !prefersReducedMotion) {
 }
 
 const form = document.querySelector('.lead-form');
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/14572152/4u1r0p6/';
 
 if (form) {
-  form.addEventListener('submit', (event) => {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalButtonLabel = submitButton ? submitButton.textContent : '';
+
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    window.alert('Formulario visual. O envio sera configurado depois.');
+
+    const formData = new FormData(form);
+    const payload = {
+      nome: formData.get('nome') || '',
+      telefone: formData.get('telefone') || '',
+      email: formData.get('email') || '',
+      aceite: formData.get('aceite') ? 'sim' : 'nao',
+      pagina: window.location.href,
+      enviado_em: new Date().toISOString(),
+    };
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Enviando...';
+    }
+
+    try {
+      await fetch(ZAPIER_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(payload).toString(),
+      });
+
+      form.reset();
+      window.alert('Recebemos seu contato! Em breve falaremos com voce no WhatsApp.');
+    } catch (error) {
+      window.alert('Nao foi possivel enviar agora. Tente novamente em instantes.');
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonLabel;
+      }
+    }
   });
 }
 
